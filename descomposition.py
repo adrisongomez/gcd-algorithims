@@ -4,19 +4,6 @@ Interpretation of find_gcd Greatest Common Divisor using factorial descompositio
 
 import typing
 
-from typing_extensions import Self
-
-
-class GCD:
-    method: typing.Callable[[int, int], int]
-
-    def set_method(self, method: typing.Callable[[int, int], int]) -> Self:
-        self.method = method
-        return self
-
-    def compute(self, a: int, b: int) -> int:
-        return self.method(a, b)
-
 
 def max_and_min(a: int, b: int) -> typing.Tuple[int, int]:
     return (a, b) if a > b else (b, a)
@@ -64,21 +51,18 @@ from unittest import TestCase
 class TestDescomposition(TestCase):
     def test_multiples(self):
         a, b = (10, 5)
-        gcd = GCD()
-        assert gcd.set_method(GCDStrategies.method_1).compute(a, b) == 5
-        assert gcd.set_method(GCDStrategies.method_2).compute(a, b) == 5
+        assert GCDStrategies.method_1(a, b) == 5
+        assert GCDStrategies.method_2(a, b) == 5
 
     def test_primes_numbers(self):
         a, b = (23, 7)
-        gcd = GCD()
-        assert gcd.set_method(GCDStrategies.method_1).compute(a, b) == 1
-        assert gcd.set_method(GCDStrategies.method_2).compute(a, b) == 1
+        assert GCDStrategies.method_1(a, b) == 1
+        assert GCDStrategies.method_2(a, b) == 1
 
     def test_big_numbers(self):
         a, b = (512 * 3 * 4, 512 * 2 * 4)
-        gcd = GCD()
-        assert gcd.set_method(GCDStrategies.method_1).compute(a, b) == 512 * 4
-        assert gcd.set_method(GCDStrategies.method_2).compute(a, b) == 512 * 4
+        assert GCDStrategies.method_1(a,b) == 512 * 4
+        assert GCDStrategies.method_2(a, b) == 512 * 4
 
 
 if __name__ == "__main__":
