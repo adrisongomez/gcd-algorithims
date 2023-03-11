@@ -21,6 +21,7 @@ class GCDStrategies:
 
         return match
 
+    @staticmethod
     def method_2(a: int, b: int) -> int:
         max, min = max_and_min(a, b)
         accumulator, factor = 1, 1
@@ -35,6 +36,7 @@ class GCDStrategies:
 
         return accumulator
 
+    @staticmethod
     def method_3(a: int, b: int) -> int:
         max, min = max_and_min(a, b)
         factor = 1
