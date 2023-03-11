@@ -2,7 +2,7 @@
 
 ## Concept
 
-This is just a practise for discrete mathematics to prove differents algorothim to
+This is just a practice for discrete mathematics to prove differents algorothim to
 get the Greatest Common Divisor using Euclides' Algorith and Factorial Descomposition
 in python.
 
@@ -18,9 +18,9 @@ python descompistion.py <number-1> <number-2>
 ### Run the test?
 
 ```bash
-python -m unittest <python-file.py>
+python -m unittest test_*.py
 
 # OR if you pytest installed
 
-pytest *.py
+pytest .
 ```
