@@ -2,11 +2,8 @@
 Interpretation of find_gcd Greatest Common Divisor using factorial descomposition
 """
 
-import typing
 
-
-def max_and_min(a: int, b: int) -> typing.Tuple[int, int]:
-    return (a, b) if a > b else (b, a)
+from utils import max_and_min, mesure_execution_time
 
 
 class GCDStrategies:
@@ -48,8 +45,6 @@ class GCDStrategies:
 
 
 if __name__ == "__main__":
-    from utils import mesure_execution_time
-
     mesure_execution_time(
         method_name="Factorial Descomposition 1",
         action=GCDStrategies.method_1,
