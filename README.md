@@ -22,5 +22,5 @@ python -m unittest <python-file.py>
 
 # OR if you pytest installed
 
-pytest .
+pytest *.py
 ```
